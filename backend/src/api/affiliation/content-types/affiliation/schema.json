@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "affiliations",
+  "info": {
+    "singularName": "affiliation",
+    "pluralName": "affiliations",
+    "displayName": "Affiliation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::company.company",
+      "inversedBy": "affiliations"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "website": {
+      "type": "string"
+    },
+    "follow_affiliates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-affiliate.follow-affiliate",
+      "mappedBy": "affiliation"
+    }
+  }
+}

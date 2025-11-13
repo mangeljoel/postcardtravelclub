@@ -1,0 +1,120 @@
+@import "../../../../styles/index.scss";
+.root {
+    // height: fit-content;
+    //min-width: 300px;
+    // display: inline-block;
+    // margin-bottom: 5%;
+}
+
+.img_main {
+    height: auto;
+    cursor: pointer;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.content {
+    padding: 12px 5px;
+     padding-right:4px!important;
+    cursor: pointer;
+    background-color: $color-card-background;
+
+    @include make-flex(column, space-between, flex-start);
+}
+
+.action_icons {
+    width: 100%;
+    @include make-flex(row, space-between, flex-start);
+
+    // margin-top: 18px;
+
+    & > img:not(:last-child) {
+        width: 20px;
+        height: 22px;
+        margin-right: 16px;
+        color: $color-primary-1;
+    }
+}
+
+.des::-webkit-scrollbar {
+    width: 3px!important;
+    margin-left: 2px;
+}
+// .des::-webkit-scrollbar-button {
+//     //width: 50px; //for horizontal scrollbar
+//     height: 200px; //for vertical scrollbar
+// }
+
+// /* Handle */
+.des::-webkit-scrollbar-thumb {
+    background: #f5896d9c;
+    //height: "10px";
+    // padding-left: "3px";
+    border: 1px solid #f5896d9c;
+    border-radius: 4px;
+}
+.description {
+    background-color: $color-card-background;
+    flex-wrap: nowrap;
+    // padding: 12px;
+    flex: 1;
+    text-align: left;
+    overflow-y: scroll;
+    transition: top 0.2s ease-out;
+    // -webkit-mask-image: linear-gradient(
+    //     to bottom,
+    //     black calc(100% - var(--bottom-mask-size, 0)),
+    //     transparent 100%
+    // );
+    // mask-image: linear-gradient(
+    //     to bottom,
+    //     black calc(100% - var(--bottom-mask-size, 0)),
+    //     transparent 100%
+    // );
+
+    & > label:last-child {
+        font-size: 1.125rem;
+        color: $color-primary-7;
+    }
+
+    & > label:nth-child(2) {
+        margin-top: 16px;
+    }
+}
+
+.title {
+    margin-top: 16px;
+    background-color: transparent;
+    text-align: justify;
+
+    & > label {
+        font-size: 1.125rem !important;
+        color: $color-primary-6 !important;
+    }
+}
+
+// .flipperContainer {
+//     position: relative;
+
+//     > div:first-child {
+//         > div:nth-child(2) {
+//             transform: translateZ(1px);
+//         }
+//     }
+// }
+.flipperContainer {
+     transform: translateZ(1px);
+     //transform:  translateZ(1px);;
+    // -webkit-transform: translateZ(1px);
+    // -moz-transform: translateZ(1px);
+    // -ms-transform: translateZ(1px);
+}
+
+// .is_top_overflowing {
+//   --top-mask-size:100px;
+// }
+
+.is_bottom_overflowing {
+    --bottom-mask-size: 100px;
+}

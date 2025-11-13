@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "directory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::directory.directory",
+      "inversedBy": "categories"
+    },
+    "albums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album.album",
+      "mappedBy": "category"
+    },
+    "dx_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dx-card.dx-card",
+      "mappedBy": "category"
+    }
+  }
+}

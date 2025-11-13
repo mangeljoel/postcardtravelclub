@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "travelStyle": {
+      "type": "enumeration",
+      "enum": [
+        "Mindful",
+        "Slow-paced",
+        "Sustainable"
+      ]
+    },
+    "interests": {
+      "type": "enumeration",
+      "enum": [
+        "Culture",
+        "Nature",
+        "Local cuisine",
+        "Wellness"
+      ]
+    },
+    "destinations": {
+      "type": "enumeration",
+      "enum": [
+        "Europe",
+        "Asia",
+        "South America",
+        "Africa"
+      ]
+    },
+    "travelFrequency": {
+      "type": "enumeration",
+      "enum": [
+        "One to Two trips",
+        "Two or more trips"
+      ]
+    },
+    "accommodation": {
+      "type": "enumeration",
+      "enum": [
+        "Eco-friendly",
+        "Local guesthouses or home-stays",
+        "Boutique hotels"
+      ]
+    },
+    "transportation": {
+      "type": "enumeration",
+      "enum": [
+        "Public transportation",
+        "Walking or cycling",
+        "Car-sharing"
+      ]
+    },
+    "activities": {
+      "type": "enumeration",
+      "enum": [
+        "Cultural tours",
+        "Hiking or nature walks",
+        "Yoga or meditation retreats",
+        "Cooking classes or food tours",
+        "Volunteer opportunities"
+      ]
+    },
+    "travelBudget": {
+      "type": "enumeration",
+      "enum": [
+        "Moderate",
+        "Willing to spend more for unique experiences"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "profile"
+    }
+  }
+}

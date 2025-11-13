@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_logs",
+  "info": {
+    "singularName": "activity-log",
+    "pluralName": "activity-logs",
+    "displayName": "ActivityLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "activity": {
+      "type": "enumeration",
+      "enum": [
+        "ArticleSubmit",
+        "ArticleApprove",
+        "ArticleReject",
+        "ArticlePublish"
+      ]
+    },
+    "detail": {
+      "type": "string"
+    },
+    "news_article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::news-article.news-article"
+    }
+  }
+}

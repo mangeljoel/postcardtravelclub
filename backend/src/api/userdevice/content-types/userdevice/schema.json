@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "userdevices",
+  "info": {
+    "singularName": "userdevice",
+    "pluralName": "userdevices",
+    "displayName": "Userdevice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fcmtoken": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "manufacturer": {
+      "type": "string"
+    },
+    "os": {
+      "type": "string"
+    },
+    "osVersion": {
+      "type": "string"
+    },
+    "isMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "userAgent": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

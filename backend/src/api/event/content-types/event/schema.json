@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event_master": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event-master.event-master"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "meta": {
+      "type": "json"
+    },
+    "ipAddress": {
+      "type": "string"
+    },
+    "ipCountry": {
+      "type": "string"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::album.album"
+    },
+    "postcard": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::postcard.postcard"
+    },
+    "podcast": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::podcast.podcast"
+    },
+    "url": {
+      "type": "string"
+    },
+    "following": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "searchData": {
+      "type": "json"
+    }
+  }
+}

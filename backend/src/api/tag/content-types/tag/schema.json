@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "tag_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag-group.tag-group",
+      "inversedBy": "tags"
+    },
+    "follow_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-tag.follow-tag",
+      "mappedBy": "tag"
+    }
+  }
+}

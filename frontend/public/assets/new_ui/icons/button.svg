@@ -1,0 +1,66 @@
+import { Box, Button } from "@chakra-ui/react";
+
+const ActionItems = ({
+    profile,
+    status,
+    formikProps,
+    editMode,
+    setEditMode,
+    adminMode,
+    isSubmitting,
+    isCreator
+}) => {
+    return (
+        <Box w="100%">
+            {editMode && isCreator && (
+                <>
+                    <Button
+                        variant="outline"
+                        isDisabled={isSubmitting}
+                        onClick={formikProps.handleSubmit}
+                    >
+                        Save as Draft
+                    </Button>
+                    <Button onClick={() => {}}>Submit for Approval</Button>
+                </>
+            )}
+            {!editMode && (isCreator || adminMode) && (
+                <Button variant="outline" onClick={setEditMode}>
+                    Edit
+                </Button>
+            )}
+            {profile && profile.user_type?.name === "EditorialAdmin" && (
+                <>
+                    <Button variant="outline">
+                        {status === "submitted"
+                            ? "Submit to EIC"
+                            : "Revoke Submission from EIC"}
+                    </Button>
+
+                    <Button variant="outline">
+                        {status === "submitted" ? "Reject" : "Revoke"}
+                    </Button>
+                </>
+            )}
+
+            {profile && profile.user_type?.name === "EditorInChief" && (
+                <>
+                    <Button variant="outline">
+                        {status === "editor-approved" ? "Approve" : "Revoke"}
+                    </Button>
+                    <Button variant="outline">
+                        {status === "editor-approved" ? "Reject" : "Revoke"}
+                    </Button>
+                </>
+            )}
+            {profile &&
+                (profile.user_type?.name === "EditorInChief" ||
+                    profile.user_type?.name === "EditorialAdmin") && (
+                    <Button variant="outline">
+                        {status === "eic-approved" ? "Publish" : "UnPublish"}
+                    </Button>
+                )}
+        </Box>
+    );
+};
+export default ActionItems;

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "company"
+    },
+    "albums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album.album",
+      "mappedBy": "company"
+    },
+    "affiliations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::affiliation.affiliation",
+      "mappedBy": "companies"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "follow_companies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-company.follow-company",
+      "mappedBy": "company"
+    }
+  }
+}

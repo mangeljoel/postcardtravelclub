@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_publication_publications",
+  "info": {
+    "displayName": "publication",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

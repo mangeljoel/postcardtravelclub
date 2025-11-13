@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "follow_albums",
+  "info": {
+    "singularName": "follow-album",
+    "pluralName": "follow-albums",
+    "displayName": "Follow Album"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "follower": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "follow_albums"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::album.album",
+      "inversedBy": "follow_albums"
+    }
+  }
+}

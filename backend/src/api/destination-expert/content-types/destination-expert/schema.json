@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destination_experts",
+  "info": {
+    "singularName": "destination-expert",
+    "pluralName": "destination-experts",
+    "displayName": "Destination Expert",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "destination_expert"
+    },
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "tagLine": {
+      "type": "text"
+    },
+    "quotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "destination-expert.quotes"
+    },
+    "founderMessage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "destination-expert.founder-message"
+    },
+    "dxSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "destination-expert.dx-sections"
+    },
+    "testimonials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::testimonial.testimonial"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "draft"
+    },
+    "dx_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dx-card.dx-card",
+      "mappedBy": "destination_expert"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::region.region"
+    },
+    "travelogues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::travelogue.travelogue",
+      "mappedBy": "destination_expert"
+    }
+  }
+}

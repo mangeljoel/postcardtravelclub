@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sessions",
+  "info": {
+    "singularName": "session",
+    "pluralName": "sessions",
+    "displayName": "Session"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ipAddress": {
+      "type": "string"
+    },
+    "params": {
+      "type": "json"
+    },
+    "url": {
+      "type": "string"
+    },
+    "ipCountry": {
+      "type": "string"
+    },
+    "referrer": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "userdevice": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::userdevice.userdevice"
+    }
+  }
+}

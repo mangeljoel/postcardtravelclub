@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "follow_affiliates",
+  "info": {
+    "singularName": "follow-affiliate",
+    "pluralName": "follow-affiliates",
+    "displayName": "Follow Affiliate"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "follower": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "follow_affiliates"
+    },
+    "affiliation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::affiliation.affiliation",
+      "inversedBy": "follow_affiliates"
+    }
+  }
+}

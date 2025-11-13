@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_articles",
+  "info": {
+    "singularName": "news-article",
+    "pluralName": "news-articles",
+    "displayName": "NewsArticle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 10
+    },
+    "publishedDate": {
+      "type": "datetime"
+    },
+    "blog": {
+      "displayName": "blog",
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.blog"
+    },
+    "videoURL": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::album.album",
+      "mappedBy": "news_article"
+    },
+    "block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "album-block.album-block"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "submitted",
+        "editor-approved",
+        "editor-rejected",
+        "eic-approved",
+        "eic-rejected",
+        "published"
+      ]
+    },
+    "assignto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

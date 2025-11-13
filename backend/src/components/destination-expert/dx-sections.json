@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_destination_expert_dx_sections",
+  "info": {
+    "displayName": "DXSections",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "dx_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dx-section.dx-section"
+    }
+  }
+}

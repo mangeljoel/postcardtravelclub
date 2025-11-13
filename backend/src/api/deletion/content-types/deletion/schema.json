@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deletions",
+  "info": {
+    "singularName": "deletion",
+    "pluralName": "deletions",
+    "displayName": "Deletion"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "fbId": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

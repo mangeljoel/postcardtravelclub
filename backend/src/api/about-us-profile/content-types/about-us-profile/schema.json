@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_us_profiles",
+  "info": {
+    "singularName": "about-us-profile",
+    "pluralName": "about-us-profiles",
+    "displayName": "AboutUsProfile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "frontImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "backImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 100
+    },
+    "about_us_section": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::about-us-section.about-us-section",
+      "inversedBy": "about_us_profiles"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "designation": {
+      "type": "enumeration",
+      "enum": [
+        "Founder",
+        "CEO",
+        "Manager",
+        "Administrator"
+      ],
+      "default": "Founder"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "subTitle": {
+      "type": "text"
+    },
+    "about": {
+      "type": "text"
+    },
+    "postcardRole": {
+      "type": "string"
+    }
+  }
+}

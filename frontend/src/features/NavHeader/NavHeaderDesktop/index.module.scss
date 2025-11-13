@@ -1,0 +1,258 @@
+@import "../../../styles/index.scss";
+
+.root {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 16px;
+
+    @include make-flex(row, space-between, center);
+    .headerClick {
+        cursor: pointer;
+        & > img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .profilepic {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        & > div {
+            margin-right: 16px;
+
+            & > label {
+                cursor: pointer;
+            }
+        }
+    }
+
+    & > div {
+        @include make-flex(row, flex-start, center);
+    }
+
+    .menu-container {
+        --siteMenuArrowOffset: 0;
+        --siteMenuRotateX: 0;
+        --siteMenuBoxHeight: 0;
+        --siteMenuBoxWidth: 0;
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        pointer-events: none;
+        perspective: 2000px;
+        overflow: visible;
+        opacity: 0;
+        transition: 500ms;
+        transition-property: opacity;
+        transition-property: opacity;
+        transition-property: opacity;
+        will-change: opacity;
+        [hidden] {
+            pointer-events: none;
+            display: block !important;
+        }
+        .site-arrow {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            margin: 0 0 0 -6px;
+            width: 12px;
+            height: 12px;
+            opacity: 0;
+            border-radius: 3px 0 0 0;
+            background: #fff;
+            transform: translateY(-9px) translateX(var(--siteMenuArrowOffset))
+                translateX(-20px) rotate(45deg);
+            box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.04);
+            transition: 250ms;
+            -webkit-transition-property: opacity, -webkit-transform;
+            transition-property: opacity, -webkit-transform;
+            transition-property: transform, opacity;
+            transition-property: transform, opacity, -webkit-transform;
+            will-change: transform, opacity;
+            z-index: 2;
+        }
+        .menu-area {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            display: inline-block;
+            min-width: 100px;
+            min-height: 72px;
+            z-index: 3;
+            height: var(--siteMenuBoxHeight);
+            width: var(--siteMenuBoxWidth);
+            transform: translateX(-50%) rotateX(-30deg)
+                translateX(var(--siteMenuArrowOffset));
+            -webkit-transform-origin: 50% -50px;
+            transform-origin: 50% -50px;
+            transition: 250ms;
+            transition-property: width, height, -webkit-transform;
+            transition-property: transform, width, height;
+            transition-property: transform, width, height, -webkit-transform;
+            will-change: transform, width, height;
+            .menu-card {
+                position: relative;
+                min-width: 100px;
+                min-height: 72px;
+                height: 100%;
+                border-radius: 8px;
+                background: #fff;
+                box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+                    0 18px 36px -18px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+                .menu-item {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    transform: translateX(0);
+                    transition: 250ms;
+                    -webkit-transition-property: opacity, -webkit-transform;
+                    transition-property: opacity, -webkit-transform;
+                    transition-property: transform, opacity;
+                    transition-property: transform, opacity, -webkit-transform;
+                    will-change: transform, opacity;
+                    &.menu-item-left {
+                        transform: translateX(150px);
+                    }
+                    &.menu-item-right {
+                        transform: translateX(-150px);
+                    }
+                    &[hidden] {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    .menu-container-visible {
+        .menu-container {
+            opacity: 1;
+            .site-arrow {
+                opacity: 1;
+            }
+            .menu-area {
+                transform: translateX(-50%) rotateX(0)
+                    translateX(var(--siteMenuArrowOffset));
+                pointer-events: auto;
+            }
+            &.full-menu-content {
+                .menu-area {
+                    width: 100%;
+                    transform: translateX(-50%) rotateX(0);
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        .sub-dropdown {
+            .sub-dropdown-menu {
+                top: 20%;
+                left: 100%;
+                li {
+                    a {
+                        color: $color-primary-1 !important;
+                        .sub-squre {
+                            color: $color-primary-1 !important;
+                            font-size: 7px;
+                            top: -1px;
+                            transition: all 0.3s;
+                        }
+                    }
+                    &:hover {
+                        a,
+                        .sub-squre {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .sub-dropdown-menu {
+                    display: block !important;
+                }
+            }
+        }
+
+        &:hover {
+            .dropdown-menu {
+                display: block;
+            }
+        }
+    }
+
+    .loggedin_menu {
+        margin-top: 8px !important;
+        // margin-left: 10px !important;
+        // margin-right: 10px !important;
+        //right: -30px !important;
+        // left: 100% !important;
+        z-index: 100;
+        // border: 1px solid rgba(0, 0, 0, 0.15);
+        // border-top: none !important;
+        //border-radius: 20px;
+        background: $color-primary-8;
+        @include make-flex(column, flex-start, flex-start);
+
+        & > div {
+            margin-bottom: 5px;
+        }
+    }
+    .loggedin_menu::-webkit-scrollbar {
+        width: 5px;
+    }
+    .loggedin_menu::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 4px;
+    }
+    .loggedin_menu_account::-webkit-scrollbar {
+        width: 5px;
+    }
+    .loggedin_menu_account::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 4px;
+    }
+    .loggedin_menu_account {
+        // margin-top: 10px !important;
+        // margin-left: 10px !important;
+        // margin-right: -9px !important;
+        //  right: -30px !important;
+        // left: 100% !important;
+        z-index: 100;
+        border: 2px solid white;
+        // border-top: none !important;
+        //border-radius: 20px;
+        background: $color-primary-8;
+        @include make-flex(column, flex-start, flex-start);
+
+        & > div {
+            margin-bottom: 5px;
+        }
+    }
+    .postalstripes {
+        margin-top: 20px !important;
+        margin: auto;
+        text-align: center;
+        height: 7px;
+        object-fit: cover;
+        width: 175px;
+    }
+    .tabSearch {
+        margin-left: 5%;
+    }
+}

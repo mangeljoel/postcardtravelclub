@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_masters",
+  "info": {
+    "singularName": "event-master",
+    "pluralName": "event-masters",
+    "displayName": "Event Master"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

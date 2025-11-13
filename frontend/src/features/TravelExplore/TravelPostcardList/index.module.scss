@@ -1,0 +1,23 @@
+@import "../../../styles/index.scss";
+
+.root {
+    padding: 12px;
+    width: 100%;
+    @include make-flex(row, center, flex-start);
+}
+.infiniteScroll::-webkit-scrollbar {
+    display: none;
+}
+.infiniteScroll {
+    .infinite-scroll-component {
+        overflow: hidden !important;
+    }
+}
+.masonry {
+    margin-top: 1%;
+    margin-bottom: 7%;
+}
+.masonryMobile {
+    margin-top: 7%;
+    margin-bottom: 15%;
+}

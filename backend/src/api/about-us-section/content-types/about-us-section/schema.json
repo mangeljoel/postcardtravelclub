@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_us_sections",
+  "info": {
+    "singularName": "about-us-section",
+    "pluralName": "about-us-sections",
+    "displayName": "AboutUsSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "about_us_profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-us-profile.about-us-profile",
+      "mappedBy": "about_us_section"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 100
+    },
+    "columns": {
+      "type": "integer"
+    }
+  }
+}

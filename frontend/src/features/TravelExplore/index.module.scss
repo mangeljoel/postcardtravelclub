@@ -1,0 +1,88 @@
+@import "../../styles/index.scss";
+
+.root {
+    width: 100%;
+    @include make-flex(column, center, center);
+}
+.option_buttons {
+    @include make-flex(row, center, center);
+
+    & > button {
+        margin-right: 16px;
+    }
+}
+.header {
+    padding: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    @include make-flex(column, center, center);
+
+    label {
+        margin: 16px 0;
+    }
+}
+
+.content {
+    @include make-flex(column, center, flex-start);
+    width: 100%;
+}
+
+.headerImg_layout {
+    width: 180px;
+    margin: 20px 0;
+    position: relative;
+
+    & > label {
+        position: absolute;
+        color: white !important;
+        top: 15%;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+@import "../../styles/index.scss";
+
+.root {
+    width: 100%;
+    @include make-flex(column, center, center);
+}
+.option_buttons {
+    @include make-flex(row, center, center);
+
+    & > button {
+        margin-right: 16px;
+    }
+}
+.header {
+    padding: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    @include make-flex(column, center, center);
+
+    label {
+        margin: 16px 0;
+    }
+}
+
+.content {
+    @include make-flex(column, center, flex-start);
+    width: 100%;
+}
+
+.headerImg_layout {
+    width: 180px;
+    margin: 20px 0;
+    position: relative;
+
+    & > label {
+        position: absolute;
+        color: white !important;
+        top: 15%;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}

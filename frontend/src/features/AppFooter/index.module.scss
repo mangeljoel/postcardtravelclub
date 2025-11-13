@@ -1,0 +1,72 @@
+@import "../../styles/index.scss";
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    margin: 0%;
+    // padding-bottom: 0% !important;
+    // padding: 5% 10%;
+    //background-color: $color-primary-8;
+
+    .headerClick {
+        cursor: pointer;
+        & > img {
+            width: 114px;
+            height: 41px;
+        }
+    }
+
+    & > a {
+        font-family: raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+
+        color: #555;
+        cursor: pointer;
+        width: 100%;
+        & > label {
+            cursor: pointer;
+        }
+    }
+
+    .icons_layout {
+        // display: flex;
+        & > a {
+            cursor: pointer;
+            margin-right: 10px;
+            & > img {
+                cursor: pointer;
+                margin-right: 10px;
+            }
+            & > p {
+                cursor: pointer;
+                margin-right: 10px;
+                margin-left: 10px;
+                margin-bottom: 5px;
+                //text-decoration: underline;
+            }
+        }
+    }
+}
+.drawer {
+    margin: 15px 0% !important;
+}
+.mobile_layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > a {
+        font-family: raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #555;
+        cursor: pointer;
+        & > label {
+            cursor: pointer;
+        }
+    }
+}

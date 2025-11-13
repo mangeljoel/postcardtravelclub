@@ -1,0 +1,381 @@
+// @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;500;600;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap");
+
+@import "./variables/index.scss";
+@import "./mixins/index.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: $color-background !important;
+    margin: 0;
+    width: 100%;
+    //  overflow: hidden;
+}
+
+.screenpadding {
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-primary-1;
+    border: 1px solid $color-primary-1;
+    border-radius: 4px;
+}
+
+video::-webkit-media-controls-panel {
+    background-image: none !important;
+    filter: brightness(0.4);
+}
+
+.preLineText {
+    white-space: pre-line !important;
+}
+
+.topheader {
+    transition: 0.5s ease;
+    top: -100px;
+}
+.active {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.Pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: #c6b38d;
+}
+
+.Pagination button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Pagination button:hover {
+    background-color: #ddd;
+}
+.video-bg-container {
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: 50% 50%;
+        right: -100%;
+        bottom: -100%;
+        top: -100%;
+        left: -100%;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -100;
+        margin: auto;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+.iosFlickeringcssfix {
+    transform: translateZ(1px);
+}
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+// .slick-slider {
+//     box-shadow: -10px 0 8px -8px black, 10px 0 8px -8px black;
+// }
+.slick-center,
+.slick-current {
+    transform: scale(1.05) !important; /* Adjust the scale as needed */
+    z-index: 2;
+}
+
+.slick-slide {
+    transition: transform 0.3s;
+}
+.articleMarkdownStyles {
+    .ql-editor {
+        margin-top: 2em;
+        h1 {
+            font-size: 32px !important;
+            font-weight: 700;
+            color: rgb(91, 81, 71);
+            line-height: 1.2;
+        }
+        div {
+            font-size: 11px;
+            font-weight: 500;
+            color: rgb(136, 132, 128);
+            margin-block: 20px;
+        }
+        h2 {
+            font-size: 1.5rem !important;
+            font-weight: 700;
+            color: rgb(91, 81, 71);
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(136, 132, 128);
+        }
+        hr {
+            border-color: #cdc5bd;
+            margin-block: 30px;
+        }
+        p {
+            font-size: 19px !important;
+            font-weight: 400;
+            color: rgb(91, 81, 71);
+            font-family:
+                "SF Pro Display",
+                -apple-system,
+                BlinkMacSystemFont,
+                Inter,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif,
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol";
+            margin-block: 30px;
+        }
+
+        img {
+            margin-block: 20px;
+            border-radius: 8px;
+            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+        }
+    }
+}
+.ql-customButton {
+    width: 60px !important;
+    background-color: #ccc;
+    padding: 0px !important;
+    cursor: pointer;
+}
+
+.ql-customButton:hover {
+    background-color: #aaa;
+}
+
+.ql-customButton::before {
+    content: "Button";
+}
+.ql-align-center {
+    text-align: "center";
+}
+// .ql-clipboard {
+//   -webkit-user-select: text;
+//   -moz-user-select: text;
+//   -ms-user-select: text;
+//   user-select: text;
+// }
+
+// .gm-ui-hover-effect {
+//     display: none !important;
+// }
+// .gm-style-iw-d {
+//     overflow: auto !important;
+// }
+// .gm-style .gm-style-iw-c {
+//     padding: 0px !important;
+// .iosFlickeringcssfix {
+//     transform: translateZ(1px);
+// }
+// .flippy-back {
+//     transform: translateZ(1px) !important;
+// }
+// .flippy-back {
+//     -webkit-transform-style: preserve-3d;
+//     transform-style: preserve-3d;
+//     -webkit-backface-visibility: hidden;
+//     -moz-backface-visibility: hidden;
+//     -o-backface-visibility: hidden;
+//     backface-visibility: hidden;
+// }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.pagination li {
+    margin: 0 5px;
+}
+.pagination li a {
+    border: 1px solid #e3e3e3;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+}
+.pagination li.active a {
+    background-color: #007bff;
+    color: white;
+}
+
+.rdrDefinedRangesWrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: white;
+}
+
+.rdrDateRangePickerWrapper {
+    width: 620px;
+    border-radius: 20px;
+    background-color: white;
+    // height: 300px;
+}
+
+.rdrCalendarWrapper {
+    border-radius: 20px;
+}
+.rdrDateDisplayWrapper {
+    border-top-right-radius: 20px;
+}
+.rdrStaticRange {
+    color: #000; /* Set your desired color here */
+}
+
+/* Selected static range item */
+.rdrStaticRangeSelected {
+    color: #000 !important; /* Ensure this color stays consistent */
+}
+
+.blend-mode-plus-lighter {
+    mix-blend-mode: plus-lighter;
+}
+
+/* styles.css */
+.flip-card-new {
+    border-radius: 1.563vw; /* Default for base screen size */
+}
+.flip-card {
+    border-radius: 8px; /* Wanderlust page */
+}
+
+@media (max-width: 80em) {
+    /* For sm and above */
+    .flip-card-new {
+        border-radius: 22.5px; /* Example for larger screens */
+    }
+}
+
+.card-container {
+    position: relative;
+    perspective: 1000px; /* For 3D effect */
+    -webkit-perspective: 1000px;
+    display: inline-block; /* Container size adjusts based on content */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    // transition: transform 2s ease;
+    // cursor: pointer;
+
+    &.flipped {
+        .front {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+        .back {
+            transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+        }
+    }
+
+    .front,
+    .back {
+        position: absolute; /* Keep both front and back in the same space */
+        top: 0;
+        left: 0;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 1.563vw;
+        backface-visibility: hidden; /* Hide the back face when not flipped */
+        -webkit-backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: transform 2s ease;
+    }
+
+    .front {
+        z-index: 2;
+        transform: rotateY(0deg); /* Front is visible by default */
+        -webkit-transform: rotateY(0deg);
+        backface-visibility: hidden; /* Hide the back face when not flipped */
+        -webkit-backface-visibility: hidden;
+    }
+
+    .back {
+        display: inline-block;
+        transform: rotateY(-180deg); /* Back is hidden initially */
+        transform-origin: rotateY(-180deg); /* Back is hidden initially */
+        -webkit-transform-origin: rotateY(-180deg);
+        // opacity: 0;
+        // visibility: hidden;
+        // transition: opacity 0.4s 0.4s visibility 0.4s;
+    }
+}
+
+@media (min-width: 80em) {
+    .card-container .front,
+    .card-container .back,
+    .flip-card {
+        border-radius: 19px; /* Set border-radius to 19px for smaller screens */
+    }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

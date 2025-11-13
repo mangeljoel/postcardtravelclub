@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "travelogues",
+  "info": {
+    "singularName": "travelogue",
+    "pluralName": "travelogues",
+    "displayName": "Travelogue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "travelogues"
+    },
+    "destination_expert": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::destination-expert.destination-expert",
+      "inversedBy": "travelogues"
+    },
+    "itinerary_block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "itinerary-item.itinerary-item"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "deckBuild",
+        "deckFreeze",
+        "onTrip",
+        "complete"
+      ]
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../../styles/index.scss";
+
+.root {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+
+  @include make-flex(row, space-between, flex-start);
+
+  h3 {
+    margin-left: 12px;
+  }
+
+  i {
+    color: $color-primary-1;
+  }
+
+  .heading {
+    @include make-flex(row, flex-start, center);
+    margin-left: 16px;
+
+    & > img {
+      width: 100px;
+      height: 40px;
+      margin-left: 16px;
+    }
+  }
+
+  .menu {
+    margin-top: 16px;
+    @include make-flex(column, flex-start, center);
+
+    & > div {
+      margin-bottom: 8px;
+    }
+  }
+
+  .loggedin_menu {
+    margin-top: 8px;
+    background-color: white;
+    z-index: 100;
+    padding: 4px;
+    @include make-flex(column, flex-start, flex-start);
+
+    & > div {
+      margin-bottom: 5px;
+    }
+  }
+}

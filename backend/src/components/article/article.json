@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_article_articles",
+  "info": {
+    "displayName": "article",
+    "icon": "newspaper",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "string"
+    },
+    "publication": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::publication.publication"
+    }
+  }
+}

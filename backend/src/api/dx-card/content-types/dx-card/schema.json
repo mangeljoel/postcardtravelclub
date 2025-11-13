@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dx_cards",
+  "info": {
+    "singularName": "dx-card",
+    "pluralName": "dx-cards",
+    "displayName": "dxCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "story": {
+      "type": "richtext"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::region.region"
+    },
+    "postcard": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::postcard.postcard"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::album.album"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "dx_cards"
+    },
+    "dx_card_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dx-card-type.dx-card-type",
+      "inversedBy": "dx_cards"
+    },
+    "destination_expert": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::destination-expert.destination-expert",
+      "inversedBy": "dx_cards"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "tag_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag-group.tag-group",
+      "inversedBy": "dx_cards"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "environment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::environment.environment",
+      "inversedBy": "dx_cards"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "dx_cards"
+    },
+    "memories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::memory.memory",
+      "mappedBy": "dx_card"
+    }
+  }
+}

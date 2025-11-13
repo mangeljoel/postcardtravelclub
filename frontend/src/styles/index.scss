@@ -1,0 +1,14 @@
+// @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;500;600;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap");
+
+@import "./variables/index.scss";
+@import "./mixins/index.scss";
+.screenpadding {
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.screenpadding_mobile {
+    padding: 0 5%;
+    box-sizing: border-box;
+}

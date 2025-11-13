@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dx_sections",
+  "info": {
+    "singularName": "dx-section",
+    "pluralName": "dx-sections",
+    "displayName": "DXSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    }
+  }
+}

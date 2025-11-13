@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_social_socials",
+  "info": {
+    "displayName": "Social",
+    "icon": "external-link-alt"
+  },
+  "options": {},
+  "attributes": {
+    "blogURL": {
+      "type": "string"
+    },
+    "facebookURL": {
+      "type": "string"
+    },
+    "instaURL": {
+      "type": "string"
+    },
+    "twitterURL": {
+      "type": "string"
+    },
+    "pinterestURL": {
+      "type": "string"
+    },
+    "linkedInURL": {
+      "type": "string"
+    }
+  }
+}

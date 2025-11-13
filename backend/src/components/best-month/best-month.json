@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_best_month_best_months",
+  "info": {
+    "displayName": "BestMonth",
+    "icon": "calendar-alt"
+  },
+  "options": {},
+  "attributes": {
+    "month": {
+      "type": "enumeration",
+      "enum": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    }
+  }
+}

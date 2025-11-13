@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tag_groups",
+  "info": {
+    "singularName": "tag-group",
+    "pluralName": "tag-groups",
+    "displayName": "TagGroup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "tag_group"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "dx_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dx-card.dx-card",
+      "mappedBy": "tag_group"
+    },
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

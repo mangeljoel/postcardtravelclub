@@ -1,0 +1,263 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "user_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-type.user-type"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "fullName"
+    },
+    "profilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "priority": {
+      "type": "integer",
+      "default": 100
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "social": {
+      "displayName": "Social",
+      "type": "component",
+      "repeatable": false,
+      "component": "social.social"
+    },
+    "isInstaActive": {
+      "type": "boolean"
+    },
+    "postcards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::postcard.postcard",
+      "mappedBy": "user"
+    },
+    "albums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album.album",
+      "mappedBy": "user"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "profilePicURL": {
+      "type": "string"
+    },
+    "fbId": {
+      "type": "string"
+    },
+    "tracking": {
+      "displayName": "Tracking",
+      "type": "component",
+      "repeatable": false,
+      "component": "tracking.tracking"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "users"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "bookmarks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bookmark.bookmark",
+      "mappedBy": "user"
+    },
+    "chats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chat.chat",
+      "mappedBy": "user"
+    },
+    "follows": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow.follow",
+      "mappedBy": "follower"
+    },
+    "followings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow.follow",
+      "mappedBy": "following"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "inversedBy": "user"
+    },
+    "city": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "follow_albums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-album.follow-album",
+      "mappedBy": "follower"
+    },
+    "follow_companies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-company.follow-company",
+      "mappedBy": "follower"
+    },
+    "follow_affiliates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-affiliate.follow-affiliate",
+      "mappedBy": "follower"
+    },
+    "isLoyaltyMember": {
+      "type": "boolean",
+      "default": false
+    },
+    "destination_expert": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::destination-expert.destination-expert",
+      "mappedBy": "user"
+    },
+    "follow_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-tag.follow-tag",
+      "mappedBy": "follower"
+    },
+    "dx_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dx-card.dx-card",
+      "mappedBy": "users_permissions_user"
+    },
+    "travelogues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::travelogue.travelogue",
+      "mappedBy": "user"
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "users_permissions_user"
+    },
+    "memories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::memory.memory",
+      "mappedBy": "user"
+    },
+    "memory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::memory.memory",
+      "inversedBy": "tagged_users"
+    }
+  }
+}

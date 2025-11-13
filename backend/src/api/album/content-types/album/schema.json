@@ -1,0 +1,213 @@
+{
+  "kind": "collectionType",
+  "collectionName": "albums",
+  "info": {
+    "singularName": "album",
+    "pluralName": "albums",
+    "displayName": "Album",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "story": {
+      "type": "richtext"
+    },
+    "postcards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::postcard.postcard",
+      "mappedBy": "album"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "albums"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "priority": {
+      "type": "integer",
+      "default": 100
+    },
+    "avgPricePerPerson": {
+      "type": "decimal"
+    },
+    "bestMonth": {
+      "displayName": "BestMonth",
+      "type": "component",
+      "repeatable": true,
+      "component": "best-month.best-month"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "on_boarding": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::album-stage.album-stage",
+      "inversedBy": "album"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "albums"
+    },
+    "tourInfo": {
+      "type": "richtext"
+    },
+    "pricesStartingAt": {
+      "type": "string"
+    },
+    "numberOfNights": {
+      "type": "string"
+    },
+    "bestTimetoTravel": {
+      "type": "string"
+    },
+    "numberOfGuestsTitle": {
+      "type": "string"
+    },
+    "numberOfGuestsValue": {
+      "type": "string"
+    },
+    "directories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::directory.directory",
+      "mappedBy": "albums"
+    },
+    "companySlug": {
+      "type": "uid"
+    },
+    "album_themes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album-theme.album-theme"
+    },
+    "fixedDates": {
+      "type": "string"
+    },
+    "additionalInfo": {
+      "type": "text"
+    },
+    "sustainability": {
+      "type": "text"
+    },
+    "website": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "follow_albums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::follow-album.follow-album",
+      "mappedBy": "album"
+    },
+    "news_article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::news-article.news-article",
+      "inversedBy": "album"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "long": {
+      "type": "float"
+    },
+    "placeId": {
+      "type": "string"
+    },
+    "media_kit": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "albums"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::region.region",
+      "inversedBy": "albums"
+    },
+    "environment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::environment.environment",
+      "inversedBy": "albums"
+    },
+    "cuisines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "memories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::memory.memory",
+      "mappedBy": "album"
+    },
+    "date": {
+      "type": "date"
+    },
+    "assignTo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "assigned",
+        "submit",
+        "rework",
+        "live"
+      ]
+    }
+  }
+}

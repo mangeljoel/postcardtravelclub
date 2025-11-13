@@ -1,0 +1,27 @@
+@import "../../../styles/index.scss";
+
+.root {
+    margin-top: 20px;
+    padding: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    @include make-flex(row, center, flex-start);
+}
+.mobile_layout {
+    padding: 0px !important;
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    @include make-flex(row, center, flex-start);
+}
+
+.masonry {
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+.masonryMobile {
+    margin-top: 10%;
+    margin-bottom: 15%;
+}

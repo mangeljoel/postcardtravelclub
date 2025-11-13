@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "postcards",
+  "info": {
+    "singularName": "postcard",
+    "pluralName": "postcards",
+    "displayName": "Postcard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "story": {
+      "type": "richtext"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "postcards"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::album.album",
+      "inversedBy": "postcards"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "articleURL": {
+      "type": "string"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isComplete": {
+      "type": "boolean",
+      "default": false
+    },
+    "priority": {
+      "type": "integer",
+      "default": 20
+    },
+    "isFounderStory": {
+      "type": "boolean",
+      "default": false
+    },
+    "bookmarks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bookmark.bookmark",
+      "mappedBy": "postcard"
+    },
+    "album_themes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album-theme.album-theme"
+    },
+    "memories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::memory.memory",
+      "mappedBy": "postcard"
+    }
+  }
+}

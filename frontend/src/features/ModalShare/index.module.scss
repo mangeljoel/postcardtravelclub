@@ -1,0 +1,89 @@
+@import "../../styles/index.scss";
+
+.root {
+    // @include modal-header;
+    box-sizing: border-box;
+
+    .body {
+        @include make-flex(column, flex-start, center);
+        box-sizing: border-box;
+        flex-wrap: wrap;
+
+        padding: 16px 0;
+
+        & > label {
+            text-align: center;
+        }
+
+        & > img {
+            width: 80%;
+            height: 8px;
+            margin-top: 16px;
+        }
+    }
+
+    .share_layout {
+        @include make-flex(row, space-between, space-between);
+        margin: 24px 0;
+        overflow: hidden;
+        & > button:not(:last-child) {
+            margin-right: 58px;
+        }
+    }
+    // .link_layout::-webkit-scrollbar {
+    //     display: none;
+    // }
+    // .copy_layout::-webkit-scrollbar {
+    //     display: none;
+    // }
+    .link_layout {
+        cursor: pointer;
+        height: 40px;
+        margin: 24px 0;
+        padding: 0px;
+        @include make-flex(row, flex-start, center);
+        flex-wrap: wrap;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        overflow: hidden;
+
+        // .link-text {
+        //     scrollbar-width: 1px;
+        //     ::-webkit-scrollbar {
+        //         width: 8px;
+        //     }
+
+        //     ::-webkit-scrollbar-thumb {
+        //         border-radius: 10px;
+        //     }
+        // }
+        .link-text::-webkit-scrollbar {
+            display: none;
+        }
+
+        & > i {
+            color: $color-primary-1;
+        }
+
+        & > label {
+            cursor: pointer;
+            // margin-right: 10px;
+        }
+
+        & > i:first-child {
+            margin-left: 15px;
+            margin-right: 10px;
+            // padding-bottom: 3px;
+            margin-top: -7px;
+        }
+
+        & > i:last-child {
+            margin-left: 24px;
+            // margin-right: 1px;
+            color: $color-primary-2;
+            margin-top: -7px;
+        }
+    }
+}

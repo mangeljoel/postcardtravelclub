@@ -1,0 +1,120 @@
+@import "../../../styles/index.scss";
+
+.heading {
+    padding: 0;
+    margin: 0;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.sm {
+    font-size: 16px;
+}
+
+.md {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.lg {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.xl {
+    font-size: 48px;
+}
+.sh {
+    font-size: 28px;
+    font-weight: normal !important;
+    font-family: $font-family_cabin !important;
+    line-height: 33px !important;
+    color: #000 !important;
+}
+
+.font-header {
+    font-family: $font-family_cabin;
+}
+.font-body {
+    font-family: $font-family_raleway;
+}
+.color-primary-1 {
+    color: $color-primary-1;
+}
+
+.color-primary-2 {
+    color: $color-primary-2;
+}
+
+.color-primary-3 {
+    color: $color-primary-3;
+}
+
+.color-primary-4 {
+    color: $color-primary-4;
+}
+
+.headerRdSmall {
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    height: 7px;
+    object-fit: cover;
+}
+
+.mobile {
+    width: 100%;
+
+    & > .headerImg {
+        margin-top: 12px 0;
+        width: 276px;
+        height: 125px;
+    }
+
+    & > label {
+        margin-top: 20px;
+        width: 78%;
+        margin-bottom: 12px;
+    }
+
+    & > h2 {
+        margin-top: 50px;
+        padding-left: 12%;
+        padding-right: 12%;
+        line-height: 40px;
+        font-size: 28px;
+    }
+
+    & > .headerRd {
+        width: 270px;
+        height: 7px;
+    }
+
+    & > label:nth-child(4) {
+        font-size: 16px !important;
+    }
+}
+
+.desktop {
+    width: 100%;
+
+    & > h2 {
+        font-size: 42px !important;
+    }
+
+    & > .headerImg {
+        margin-top: 12px 0;
+        width: 417px;
+        height: 188px;
+    }
+
+    & > label {
+        margin-top: 40px;
+        width: 80%;
+        margin-bottom: 12px;
+    }
+
+    & > h2 {
+        margin-top: 50px;
+    }
+}

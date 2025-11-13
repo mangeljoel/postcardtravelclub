@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_other_names_other_names",
+  "info": {
+    "displayName": "OtherNames",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "../../../../styles/index.scss";
+
+.root {
+    cursor: pointer;
+    min-width: 300px;
+    // img {
+    //     height: auto;
+    //     width: 100%;
+    //     border-top-left-radius: 5px;
+    //     border-top-right-radius: 5px;
+    // }
+}
+
+.content {
+    padding: 12px;
+
+    background-color: $color-card-background;
+    @include make-flex(column, flex-start, flex-start);
+    text-align: left;
+}
+.borderRadius {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.description {
+    margin-top: 12px;
+    cursor: pointer !important;
+    flex-wrap: nowrap;
+    text-align: justify;
+    flex: 1;
+    overflow-y: overlay;
+    -webkit-overflow-scrolling: touch;
+    & > label:last-child {
+        font-size: 1.125rem;
+        color: $color-primary-7;
+    }
+
+    & > label:nth-child(2) {
+        margin-top: 16px;
+    }
+}
+.action_icons {
+    width: 100%;
+    @include make-flex(row, flex-start, flex-start);
+
+    margin-top: 24px;
+
+    & > img:not(:last-child) {
+        width: 20px;
+        height: 22px;
+        margin-right: 16px;
+        color: $color-primary-1;
+        margin-top: 3%;
+    }
+
+    *:last-child {
+        margin-left: auto;
+    }
+}
+
+.chips::-webkit-scrollbar {
+    display: none;
+}
+.des::-webkit-scrollbar {
+    display: none;
+}
+.chips {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    width: 0px;
+    flex: 1;
+    box-sizing: border-box;
+
+    @include make-flex(row, flex-start, flex-start);
+    overflow-x: auto;
+
+    & > div {
+        @include make-flex(row, center, center);
+        cursor: pointer !important;
+        flex-wrap: wrap;
+        flex-grow: 0;
+        margin-right: 12px;
+        padding: 2px 12px !important;
+        background: #fbf8f5;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+
+        & > label {
+            white-space: nowrap;
+            font-family: $font-family_raleway !important;
+        }
+    }
+}
+.flipperContainer {
+    transform: translateZ(1px);
+}

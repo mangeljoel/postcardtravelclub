@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memories",
+  "info": {
+    "singularName": "memory",
+    "pluralName": "memories",
+    "displayName": "memory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "isPrivate": {
+      "type": "boolean"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "date": {
+      "type": "date"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::album.album",
+      "inversedBy": "memories"
+    },
+    "postcard": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::postcard.postcard",
+      "inversedBy": "memories"
+    },
+    "dx_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dx-card.dx-card",
+      "inversedBy": "memories"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "memories"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "region": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::region.region",
+      "inversedBy": "memories"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "memories"
+    },
+    "internalUrl": {
+      "type": "string"
+    },
+    "externalUrl": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "shareType": {
+      "type": "enumeration",
+      "enum": [
+        "private",
+        "public",
+        "selected"
+      ]
+    },
+    "tagged_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "memory"
+    }
+  }
+}

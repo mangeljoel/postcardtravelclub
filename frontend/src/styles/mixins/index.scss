@@ -1,0 +1,32 @@
+@mixin make-flex(
+  $flex-direction,
+  $justify: "flex-start",
+  $align: "flex-start"
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin modal-header {
+  margin: -1px;
+
+  & > .header {
+    padding: 16px;
+    background-color: $color-primary-3;
+
+    @include make-flex(row, center, center);
+
+    & > h3 {
+      color: white !important;
+    }
+
+    & > i {
+      cursor: pointer;
+      color: white;
+      position: absolute;
+      right: 12px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "kind": "singleType",
+  "collectionName": "configs",
+  "info": {
+    "singularName": "config",
+    "pluralName": "configs",
+    "displayName": "config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version": {
+      "type": "integer"
+    },
+    "mediaPath": {
+      "type": "string"
+    },
+    "headerTitle": {
+      "type": "string"
+    },
+    "headerSubTitle": {
+      "type": "text"
+    },
+    "showFeaturedAlbums": {
+      "type": "boolean",
+      "default": true
+    },
+    "showFeaturedPostcards": {
+      "type": "boolean",
+      "default": true
+    },
+    "maxFeaturedAlbums": {
+      "type": "integer",
+      "default": 10
+    },
+    "maxFeaturedPostcards": {
+      "type": "integer",
+      "default": 20
+    },
+    "sharedSeo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "publications": {
+      "type": "text"
+    },
+    "ourStoryDescription": {
+      "type": "text"
+    },
+    "supportLink": {
+      "type": "string"
+    },
+    "featuredAlbums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album.album"
+    },
+    "featuredPostcards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::postcard.postcard"
+    }
+  }
+}

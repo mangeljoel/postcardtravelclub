@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_album_block_album_blocks",
+  "info": {
+    "displayName": "Album block",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "album_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::album-section.album-section"
+    },
+    "subOrder": {
+      "type": "integer"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    },
+    "imageCopyright": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_destination_expert_founder_messages",
+  "info": {
+    "displayName": "FounderMessage"
+  },
+  "options": {},
+  "attributes": {
+    "founderBrief": {
+      "type": "richtext"
+    },
+    "founderImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

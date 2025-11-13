@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "waiting_lists",
+  "info": {
+    "singularName": "waiting-list",
+    "pluralName": "waiting-lists",
+    "displayName": "Waiting List",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "waiting",
+        "activated",
+        "rejected"
+      ],
+      "default": "waiting"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "city": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    }
+  }
+}

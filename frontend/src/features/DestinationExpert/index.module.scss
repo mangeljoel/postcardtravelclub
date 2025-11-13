@@ -1,0 +1,98 @@
+.customMarkdown {
+    h2 {
+        color: #EA6146;
+        font-family: "lora";
+        font-style: italic;
+        font-size: 3.06vw;
+    }
+    
+    p {
+        span {
+            color: inherit!important;
+        }
+        strong {
+            color: inherit!important;
+        }
+        font-size: 1.46vw ;
+        line-height: 2vw;
+        font-weight: 400;
+        color: #111111;
+        font-family: "raleway";
+        margin-block: 2vw;
+    }
+
+    ul {
+        span {
+            color: inherit!important;
+        }
+        strong {
+            color: inherit!important;
+        }
+        font-size: 1.46vw ;
+        line-height: 2vw;
+        font-weight: 400;
+        color: #111111;
+        font-family: "raleway";
+        margin-block: 30px;
+        margin-left: 3vw;
+    }
+
+    ol {
+        span {
+            color: inherit!important;
+        }
+        strong {
+            color: inherit!important;
+        }
+        font-size: 1.46vw ;
+        line-height: 2vw;
+        font-weight: 400;
+        color: #111111;
+        font-family: "raleway";
+        margin-block: 30px;
+        margin-left: 3vw;
+    }
+
+    img {
+        margin-block: 3vw;
+        width: 78.611vw;
+        height: 50.28vw;
+        border-radius: 3.611vw;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    // Define one media query and handle all styles within it
+    @media only screen and (max-width: 48em) {
+        h2 {
+            font-size: 6.4vw;
+        }
+        p {
+            font-size: 3.5vw;
+            line-height: 5.3vw;
+            font-weight: 400;
+            margin-block: 5.55vw;
+        }
+
+        ul {
+            font-size: 3.5vw;
+            line-height: 5.3vw;
+            font-weight: 400;
+            margin-block: 5.55vw;
+            margin-left: 8vw;
+        }
+
+        ol {
+            font-size: 3.5vw;
+            line-height: 5.3vw;
+            font-weight: 400;
+            margin-block: 5.55vw;
+            margin-left: 8vw;
+        }
+
+        img {
+        margin-block: 20px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+    }
+}

@@ -1,0 +1,170 @@
+.root{
+    h1 {
+        font-size: 42px !important;
+         margin-bottom: 1.5em;
+        font-weight: 700;
+        color: rgb(91, 81, 71);
+        line-height: 1.1;
+    }
+    div {
+        font-size: 1.04vw!important;
+        font-family: 'raleway';
+        font-weight: 500;
+        // color: rgb(136, 132, 128);
+        color: rgb(136, 132, 128);
+        color: #9C9895;
+        margin-block: 20px;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        color: rgb(91, 81, 71);
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 32px;
+        margin-bottom: 1.5em;
+        font-weight: 700;
+        line-height: 1.1;
+        color: rgb(91, 81, 71);
+    }
+    hr {
+        border-color: #cdc5bd;
+        margin-block: 30px;
+    }
+    p {
+        span {
+            color: inherit!important;
+        }
+        strong {
+            color: inherit!important;
+        }
+        font-size: 1.46vw ;
+        line-height: 1.875vw;
+        font-weight: 400;
+        color: #111111;
+        font-family: "raleway";
+        margin-bottom: 30px;
+    }
+
+    img {
+        margin-block: 20px;
+        width: 63.05vw;
+        height: 34.72vw;
+        border-radius: 1.67vw;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+    a{
+        // color:rgb(251, 116, 92);
+        color: inherit!important;
+        text-decoration: underline;
+        font-weight:500;
+    }
+    a:hover{
+        color:#EDB6A9!important;
+    }
+    @media only screen and (max-width: 48em) {
+//    margin-top: 2em;
+    h1 {
+        font-size: 1.6rem !important;
+         margin-bottom: 1.5em;
+        font-weight: 700;
+        color: rgb(91, 81, 71);
+        line-height: 1.1;
+    }
+    div {
+        font-size: 2.5vw!important;
+        line-height: 6.67vw;
+        margin-block: 0px;
+    }
+    h3 {
+        font-size: 1.4rem;
+
+
+
+
+          margin-bottom: 1.5em;
+        font-weight: 700;
+        line-height: 1.1;
+        color: rgb(91, 81, 71);
+    }
+    hr {
+        border-color: #cdc5bd;
+        margin-block: 30px;
+    }
+    p {
+        font-size: 3.5vw;
+        line-height: 5vw;
+        font-weight: 400;
+        // color: rgb(91, 81, 71);
+        // font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, Inter,
+        //     "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        //     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin-block: 5.55vw;
+    }
+
+    img {
+        margin-block: 10px;
+        width: 78.611vw;
+        height: 50.28vw;
+        border-radius: 3.611vw;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+
+}
+.noMarginbottom{
+    margin-bottom: 0px!important;
+}
+}
+@media only screen and (max-width: 48em) {
+.markdownStyles {
+   margin-top: 2em;
+    h1 {
+        font-size: 1.6rem !important;
+         margin-bottom: 1.5em;
+        font-weight: 700;
+        color: rgb(91, 81, 71);
+        line-height: 1.1;
+    }
+    div {
+        font-size: 11px;
+        font-weight: 500;
+        color: rgb(136, 132, 128);
+        margin-block: 20px;
+    }
+    h3 {
+        font-size: 1.4rem;
+
+
+
+
+          margin-bottom: 1.5em;
+        font-weight: 700;
+        line-height: 1.1;
+        color: rgb(91, 81, 71);
+    }
+    hr {
+        border-color: #cdc5bd;
+        margin-block: 30px;
+    }
+    p {
+        font-size: 20px !important;
+        font-weight: 400;
+        color: rgb(91, 81, 71);
+        font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, Inter,
+            "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin-block: 30px;
+    }
+
+    img {
+        margin-block: 20px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+}
+.noMarginbottom{
+    margin-bottom: 0px!important;
+}

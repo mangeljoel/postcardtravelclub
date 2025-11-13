@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "follow_tags",
+  "info": {
+    "singularName": "follow-tag",
+    "pluralName": "follow-tags",
+    "displayName": "Follow Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "follower": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "follow_tags"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "follow_tags"
+    }
+  }
+}

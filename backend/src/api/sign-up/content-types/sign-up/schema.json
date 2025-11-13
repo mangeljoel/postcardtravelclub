@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sign_ups",
+  "info": {
+    "singularName": "sign-up",
+    "pluralName": "sign-ups",
+    "displayName": "SignUp"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "accessCode": {
+      "type": "string"
+    }
+  }
+}

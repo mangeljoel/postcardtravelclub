@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blog_blogs",
+  "info": {
+    "displayName": "blog",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "contentv2": {
+      "type": "blocks"
+    }
+  }
+}

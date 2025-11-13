@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "album_themes",
+  "info": {
+    "singularName": "album-theme",
+    "pluralName": "album-themes",
+    "displayName": "AlbumTheme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

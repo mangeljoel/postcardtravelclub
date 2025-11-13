@@ -1,0 +1,18 @@
+:root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --numcards: 4;
+}
+
+#cards {
+    padding-bottom: calc(var(--numcards));
+}
+
+.card {
+    position: sticky;
+    top: 0;
+    padding-top: var(--card-top-offset);
+    transform-origin: 50% 0%;
+    will-change: transform;
+}

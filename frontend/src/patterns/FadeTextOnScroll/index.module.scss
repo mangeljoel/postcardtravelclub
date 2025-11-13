@@ -1,0 +1,42 @@
+.is_bottom_overflowing {
+    --bottom-mask-size: 100px;
+}
+.des::-webkit-scrollbar {
+    width: 4px;
+    margin-left: 2px;
+}
+.des::-webkit-scrollbar-thumb {
+    background: #f5896d9c;
+    //height: "10px";
+    // padding-left: "3px";
+    border: 1px solid #f5896d9c;
+    border-radius: 4px;
+}
+
+.description {
+    flex-wrap: nowrap;
+    padding: 12px;
+    flex: 1;
+    text-align: justify;
+    overflow-y: overlay;
+    transition: top 0.2s ease-out;
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black calc(100% - var(--bottom-mask-size, 0)),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        black calc(100% - var(--bottom-mask-size, 0)),
+        transparent 100%
+    );
+
+    & > label:last-child {
+        font-size: 1.125rem;
+        //color: $color-primary-7;
+    }
+
+    & > label:nth-child(2) {
+        margin-top: 16px;
+    }
+}

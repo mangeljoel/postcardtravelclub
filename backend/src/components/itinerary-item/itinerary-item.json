@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_itinerary_item_itinerary_items",
+  "info": {
+    "displayName": "ItineraryItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "dx_card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dx-card.dx-card"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "memories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::memory.memory"
+    }
+  }
+}

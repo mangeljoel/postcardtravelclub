@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "album_stages",
+  "info": {
+    "singularName": "album-stage",
+    "pluralName": "album-stages",
+    "displayName": "OnBoarding",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::album.album",
+      "mappedBy": "on_boarding"
+    },
+    "key": {
+      "type": "string"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "tour-meta-story",
+        "postcard-titles-upload",
+        "postcard-titles-review",
+        "postcard-stories-upload",
+        "postcard-stories-review",
+        "approved"
+      ]
+    },
+    "tempProfile": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

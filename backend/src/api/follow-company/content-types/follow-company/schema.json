@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "follow_companies",
+  "info": {
+    "singularName": "follow-company",
+    "pluralName": "follow-companies",
+    "displayName": "Follow Company"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "follower": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "follow_companies"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "follow_companies"
+    }
+  }
+}
